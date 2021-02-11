@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import i18next from 'i18next';
+import Dropdown from './Dropdown';
 import elephantHead from '../assets/elephant-head.png';
 import {
   HeaderStyled,
@@ -10,15 +11,20 @@ import {
   LogoImg,
   NavList,
 } from '../styles/styled';
+import Icon from '@mdi/react';
+import { mdiMenuDown } from '@mdi/js';
 
-const Header = () => {
+export default function Header() {
   const { t } = useTranslation();
+  const [dropdown, setDropdown] = useState(false);
+  console.log(setDropdown);
+
   return (
     <HeaderStyled>
       <Link to="/">
         <Logo>
           <LogoImg alt="elephant" src={elephantHead}></LogoImg>
-          <h3>{t('header.elephants')}</h3>
+          <h3>{t('header.animals')} </h3>
         </Logo>
       </Link>
       <nav>
@@ -30,7 +36,11 @@ const Header = () => {
           </li>
           <li>
             <NavButton>
-              <Link to="/elephants">{t('header.elephants')} </Link>
+              <Link to="/animals">
+                {t('header.animals')} <Icon path={mdiMenuDown} size={0.8} />
+              </Link>
+              {dropdown && <Dropdown />}
+              <Dropdown></Dropdown>
             </NavButton>
           </li>
           <span>| </span>
@@ -48,6 +58,4 @@ const Header = () => {
       </nav>
     </HeaderStyled>
   );
-};
-
-export default Header;
+}

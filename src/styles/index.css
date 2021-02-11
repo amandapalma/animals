@@ -386,4 +386,31 @@ h3 {
   justify-self: center;
 }
 
+/* DROPDOWN */
+.dropdownMenu {
+  position: absolute;
+  top: 50px;
+  display: flex;
+  flex-direction: column;
+}
 
+.dropdownMenu .clicked {
+  display: none;
+}
+
+.dropdownMenu li {
+  cursor: pointer;
+  border: 1px solid silver;
+  width: 75px;
+}
+
+.dropdownMenu li:hover {
+  background: silver;
+}
+
+.dropdownLink {
+  /* display: block;
+  height: 100%;
+  width: 100%; */
+  padding: 5px;
+}

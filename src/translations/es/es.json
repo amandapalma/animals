@@ -1,7 +1,11 @@
 {
   "header": {
     "home": "Inicio",
-    "elephants": "Elefantes"
+    "animals": "Animales",
+    "elephants": "Elepfantes",
+    "cats": "Gatos",
+    "elephantList": "Lista de elefantes",
+    "catList": "Lista de gatos"
   },
   "home": {
     "p1": "Seis eran los hombres de Indostán, tan dispuestos a aprender,que al Elefante fueron a ver -Aunque todos eran ciegos-, pensando que mediante la observación su mente podrían satisfacer.",

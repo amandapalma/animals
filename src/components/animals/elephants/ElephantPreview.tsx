@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Elephant } from '../../utils/types';
+import { Elephant } from '../../../utils/types';
 import axios from 'axios';
-import elephant from '../../assets/elephant.png';
+import elephant from '../../../assets/elephant.png';
 import { Card, CardMedia, CardActions } from '@material-ui/core';
 import Icon from '@mdi/react';
 import { mdiArrowLeft } from '@mdi/js';
@@ -13,7 +13,7 @@ import {
   CardText,
   NavButton,
   MoreButton,
-} from '../../styles/styled';
+} from '../../../styles/styled';
 
 export default function ElephantPreview() {
   const { t } = useTranslation();
@@ -72,7 +72,7 @@ export default function ElephantPreview() {
       <Card className={classes.card}>
         <CardActions className={classes.actions}>
           <NavButton>
-            <Link to="/elephants">
+            <Link to="/animals/elephants/list">
               <Icon path={mdiArrowLeft} title="arrow" size={0.8} />
               back
             </Link>
