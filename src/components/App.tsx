@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Header from './Header';
 import Home from './home/Home';
-import Animals from './animals/Animals';
+// import Animals from './animals/Animals';
 import ElephantHome from './animals/elephants/ElephantHome';
 import ElephantList from './animals/elephants/ElephantList';
 import ElephantPreview from './animals/elephants/ElephantPreview';
@@ -22,9 +22,9 @@ export default function App() {
           <Route exact path="/">
             <Home></Home>
           </Route>
-          <Route exact path="/animals">
+          {/* <Route exact path="/animals">
             <Animals></Animals>
-          </Route>
+          </Route> */}
 
           <Route exact path="/animals/elephants">
             <ElephantHome></ElephantHome>

@@ -12,12 +12,16 @@ import {
   NavList,
 } from '../styles/styled';
 import Icon from '@mdi/react';
-import { mdiMenuDown } from '@mdi/js';
+import { mdiMenuDown, mdiMenuUp } from '@mdi/js';
 
 export default function Header() {
   const { t } = useTranslation();
   const [dropdown, setDropdown] = useState(false);
-  console.log(setDropdown);
+  console.log('dropdown: ', dropdown);
+
+  const displayDropdown = () => {
+    setDropdown(!dropdown);
+  };
 
   return (
     <HeaderStyled>
@@ -35,12 +39,12 @@ export default function Header() {
             </NavButton>
           </li>
           <li>
-            <NavButton>
-              <Link to="/animals">
-                {t('header.animals')} <Icon path={mdiMenuDown} size={0.8} />
-              </Link>
-              {dropdown && <Dropdown />}
-              <Dropdown></Dropdown>
+            <NavButton onClick={displayDropdown}>
+              <span>
+                {t('header.animals')}
+                <Icon path={dropdown ? mdiMenuUp : mdiMenuDown} size={0.7} />
+              </span>
+              {dropdown && <Dropdown displayDropdown={displayDropdown} />}
             </NavButton>
           </li>
           <span>| </span>

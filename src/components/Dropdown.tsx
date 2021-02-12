@@ -1,34 +1,26 @@
 import React from 'react';
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
-export default function Dropdown() {
+export default function Dropdown(props: { displayDropdown: any }) {
   const { t } = useTranslation();
-  const [click, setClick] = useState(false);
+
   const handleClick = () => {
-    setClick(!click);
+    props.displayDropdown();
   };
   return (
-    <ul
-      onClick={handleClick}
-      className={click ? 'dropdownMenu clicked' : 'dropdownMenu'}
-    >
+    <ul className="dropdownMenu">
       <li>
         <Link
           to="/animals/elephants"
           className="dropdownLink"
-          onClick={() => setClick(false)}
+          onClick={handleClick}
         >
           {t('header.elephants')}
         </Link>
       </li>
       <li>
-        <Link
-          to="/animals/cats"
-          className="dropdownLink"
-          onClick={() => setClick(false)}
-        >
+        <Link to="/animals/cats" className="dropdownLink" onClick={handleClick}>
           {t('header.cats')}
         </Link>
       </li>

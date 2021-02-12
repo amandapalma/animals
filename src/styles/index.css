@@ -364,7 +364,8 @@ template {
   line-height: normal;
 }
 p,
-a {
+a,
+span {
   font-size: 12px;
   font-weight: 400;
 }
@@ -387,30 +388,21 @@ h3 {
 }
 
 /* DROPDOWN */
+
 .dropdownMenu {
   position: absolute;
-  top: 50px;
+  top: 55px;
   display: flex;
   flex-direction: column;
 }
 
-.dropdownMenu .clicked {
-  display: none;
-}
-
 .dropdownMenu li {
   cursor: pointer;
-  border: 1px solid silver;
+  border-bottom: 1px solid silver;
   width: 75px;
+  padding: 5px;
 }
 
 .dropdownMenu li:hover {
-  background: silver;
-}
-
-.dropdownLink {
-  /* display: block;
-  height: 100%;
-  width: 100%; */
-  padding: 5px;
+  background-color: lightcyan;
 }
