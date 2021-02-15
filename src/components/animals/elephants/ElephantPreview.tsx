@@ -48,8 +48,8 @@ export default function ElephantPreview() {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
-  console.log('eName: ', eName);
-  console.log('selectedItem: ', selectedItem);
+  // console.log('eName: ', eName);
+  // console.log('selectedItem: ', selectedItem);
 
   const useStyles = makeStyles({
     card: {

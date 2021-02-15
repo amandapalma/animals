@@ -17,7 +17,7 @@ import { mdiMenuDown, mdiMenuUp } from '@mdi/js';
 export default function Header() {
   const { t } = useTranslation();
   const [dropdown, setDropdown] = useState(false);
-  console.log('dropdown: ', dropdown);
+  // console.log('dropdown: ', dropdown);
 
   const displayDropdown = () => {
     setDropdown(!dropdown);

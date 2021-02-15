@@ -1,7 +1,7 @@
 import axios from 'axios';
 import { Elephant } from '../utils/types';
 
-export default function getDataFromApi(): Promise<Elephant[]> {
+export default function getElephantDataFromApi(): Promise<Elephant[]> {
   return axios
     .get(`https://elephant-api.herokuapp.com/elephants`)
     .then((res) => {

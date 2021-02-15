@@ -20,7 +20,7 @@ export default function Dropdown(props: { displayDropdown: any }) {
         </Link>
       </li>
       <li>
-        <Link to="/animals/cats" className="dropdownLink" onClick={handleClick}>
+        <Link to="/cats" className="dropdownLink" onClick={handleClick}>
           {t('header.cats')}
         </Link>
       </li>

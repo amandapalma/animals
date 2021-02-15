@@ -9,3 +9,12 @@ export type Elephant = {
   more: string;
   description: string;
 };
+
+export type Cat = {
+  id: string;
+  name: string;
+  origin: string;
+  img: string;
+  more: string;
+  description: string;
+};
