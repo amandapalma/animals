@@ -1,6 +1,8 @@
 import axios from 'axios';
 import { Elephant } from '../utils/types';
 
+// Lo mismo que en cats, los endpoints no se consumen en el servicio, se consumen en el componente donde son útiles.
+// El map ese no aporta valor a la aplicación dado que los datos ya te vienen directamente de la llamada y aumenta la complejidad sin razón.
 export default function getElephantDataFromApi(): Promise<Elephant[]> {
   return axios
     .get(`https://elephant-api.herokuapp.com/elephants`)
@@ -22,3 +24,11 @@ export default function getElephantDataFromApi(): Promise<Elephant[]> {
       return items;
     });
 }
+
+// Es decir, debería solo ser esto:
+
+// export default function getElephantDataFromApi(): Promise<Elephant[]> {
+//   return axios
+//     .get(`https://elephant-api.herokuapp.com/elephants`)
+//  
+// }
